@@ -6,8 +6,7 @@ body {
 }
 
 .container {
-  background: url("/assets/desktop/image-host.jpg") no-repeat;
-  background-position: right 5% center;
+  background: url("/assets/desktop/bg-pattern-dots.svg") no-repeat right 2.6% bottom 13%, url("/assets/desktop/image-host.jpg") no-repeat right 5% center;
   min-height: 100vh;
   margin: 3rem 10rem;
 }
@@ -39,6 +38,39 @@ body {
   width: 60%;
   color: var(--clr--grey);
   line-height: 2rem;
+}
+.cards__info form {
+  font-weight: var(--fw--very-bold);
+  margin-top: 2rem;
+  position: relative;
+  width: 500px;
+}
+.cards__info form input {
+  cursor: pointer;
+  font-weight: var(--fw--bold);
+  color: var(--clr--grey);
+  letter-spacing: 2px;
+  background: var(--clr--bg-input);
+  width: 100%;
+  border: none;
+  border-radius: 3rem;
+  padding: 1rem;
+  line-height: 1rem;
+  outline: none;
+}
+.cards__info form button {
+  cursor: pointer;
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  bottom: 3px;
+  font-size: 1.2rem;
+  border: none;
+  background: var(--clr--green);
+  color: var(--clr--background);
+  outline: none;
+  padding: 0 1.5rem 0.1rem;
+  border-radius: 2rem;
 }
 
 /*
@@ -112,6 +144,7 @@ h6 {
 
 :root {
   --clr--background: hsl(224, 35%, 11%);
+  --clr--bg-input: hsl(225, 26%, 23%);
   --clr--grey: hsl(225, 40%, 83%);
   --clr--green: hsl(157, 74%, 62%);
   --clr--white: hsl(0, 0%, 100%);
@@ -124,5 +157,5 @@ h6 {
   --fs--regular: 18px;
   /* Font Weight */
   --fw--bold: 300;
-  --fw--very-bold: 500;
+  --fw--very-bold: 800;
 }/*# sourceMappingURL=style.css.map */

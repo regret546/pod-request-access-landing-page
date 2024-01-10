@@ -1,6 +1,7 @@
 .container {
-  background: url("/assets/desktop/image-host.jpg") no-repeat;
-  background-position: right 5%center;
+  background: url("/assets/desktop/bg-pattern-dots.svg") no-repeat right 2.6%
+      bottom 13%,
+    url("/assets/desktop/image-host.jpg") no-repeat right 5%center;
   min-height: 100vh;
   margin: 3rem 10rem;
 }
