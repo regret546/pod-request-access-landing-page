@@ -1,3 +1,46 @@
+body {
+  background-color: var(--clr--background);
+  font-family: var(--ff--primary);
+  font-size: var(--fs--regular);
+  color: var(--clr--white);
+}
+
+.container {
+  background: url("/assets/desktop/image-host.jpg") no-repeat;
+  background-position: right 5% center;
+  min-height: 100vh;
+  margin: 3rem 10rem;
+}
+
+.cards {
+  display: grid;
+  gap: 12rem;
+}
+.cards__info {
+  text-align: left;
+  background-color: var(--clr--background);
+  height: 600px;
+  max-width: 1000px;
+  padding: 4rem 0;
+}
+.cards__info h1 {
+  font-weight: var(--fw--bold);
+  font-size: 3.7rem;
+  letter-spacing: 6px;
+  line-height: 3.5rem;
+  text-transform: uppercase;
+  color: var(--clr--green);
+  margin-bottom: 1.5rem;
+}
+.cards__info h1 span {
+  color: var(--clr--white);
+}
+.cards__info p {
+  width: 60%;
+  color: var(--clr--grey);
+  line-height: 2rem;
+}
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -68,7 +111,8 @@ h6 {
 }
 
 :root {
-  --clr--background: hsl(195, 43%, 9%);
+  --clr--background: hsl(224, 35%, 11%);
+  --clr--grey: hsl(225, 40%, 83%);
   --clr--green: hsl(157, 74%, 62%);
   --clr--white: hsl(0, 0%, 100%);
 }
