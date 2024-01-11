@@ -6,7 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Chivo:wght@200;300;400;600&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/dist/style.css" class="css" />
@@ -33,9 +33,10 @@
             your podcast to Spotify, Apple Podcasts, Google Podcasts, Pocket
             Casts and more!
           </p>
-          <form action="#">
-            <input type="text" placeholder="Email Address" />
-            <button>Request access</button>
+          <form id="form" action="/" method="GET">
+            <input id="email" type="text" placeholder="Email Address" />
+            <div class="error"></div>
+            <button type="submit">Request access</button>
           </form>
         </div>
       </section>

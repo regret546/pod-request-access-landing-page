@@ -9,9 +9,9 @@
     max-width: 1000px;
     padding: 4rem 0;
     h1 {
-      font-weight: var(--fw--bold);
-      font-size: 3.7rem;
-      letter-spacing: 6px;
+      font-weight: var(--fw--light);
+      font-size: 4rem;
+      letter-spacing: 5px;
       line-height: 3.5rem;
       text-transform: uppercase;
       color: var(--clr--green);
@@ -23,7 +23,7 @@
     }
 
     p {
-      width: 60%;
+      width: 55%;
       color: var(--clr--grey);
       line-height: 2rem;
     }
@@ -34,10 +34,9 @@
       position: relative;
       width: 500px;
       input {
-        cursor: pointer;
-        font-weight: var(--fw--bold);
+        cursor: text;
         color: var(--clr--grey);
-        letter-spacing: 2px;
+        letter-spacing: 1px;
         background: var(--clr--bg-input);
         width: 100%;
         border: none;
@@ -49,10 +48,10 @@
       button {
         cursor: pointer;
         position: absolute;
-        right: 3px;
-        top: 3px;
-        bottom: 3px;
-        font-size: 1.2rem;
+        right: 4px;
+        top: 4px;
+        bottom: 4px;
+        font-size: 1rem;
         border: none;
         background: var(--clr--green);
         color: var(--clr--background);
@@ -61,5 +60,15 @@
         border-radius: 2rem;
       }
     }
+  }
+
+  .inputValid {
+    border-color: var(--clr--green);
+  }
+  .inputError {
+    border-color: red;
+  }
+  .error {
+    color: red;
   }
 }
