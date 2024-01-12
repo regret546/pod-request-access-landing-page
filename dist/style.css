@@ -73,12 +73,13 @@ body {
   border-radius: 2rem;
 }
 .cards .inputValid {
-  border-color: var(--clr--green);
+  position: absolute;
+  left: 20px;
+  color: green;
 }
 .cards .inputError {
-  border-color: red;
-}
-.cards .error {
+  position: absolute;
+  left: 20px;
   color: red;
 }
 

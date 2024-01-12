@@ -1,36 +1,19 @@
-const emailInput = document.querySelector("#email");
 const form = document.querySelector("#form");
+const inputVerification = document.querySelector("#inputVerification");
+const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+const emailInput = document.querySelector("#email");
 
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  validateInputs();
-});
-
-const setError = function (element, message) {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = message;
-  inputControl.classList.add(".error");
-  inputControl.classList.remove("success");
-};
-
-const setSuccess = function (element) {
-  const inputControl = element.parentElement;
-  const errorDisplay = inputControl.querySelector(".error");
-
-  errorDisplay.innerText = "";
-  inputControl.classList.add("success");
-  inputControl.classList.remove("error");
-};
-
-const validateInputs = function () {
-  const emailInputValue = emailInput.value.trim();
-
-  if (emailInputValue === "") {
-    setError(emailInput, "Email must be not empty");
+  if (!emailInput.value.match(emailRegex)) {
+    inputVerification.classList.add("inputError");
+    inputVerification.innerText = "Please enter a valid email!";
+    emailInput.value = "";
   } else {
-    setSuccess(emailInput);
+    alert(`Email ${emailInput.value} Submitted`);
+    inputVerification.classList.remove("inputError");
+    inputVerification.innerText = "";
+    emailInput.value = "";
   }
-};
+});

@@ -63,12 +63,14 @@
   }
 
   .inputValid {
-    border-color: var(--clr--green);
+    position: absolute;
+    left: 20px;
+    color: green;
   }
+
   .inputError {
-    border-color: red;
-  }
-  .error {
+    position: absolute;
+    left: 20px;
     color: red;
   }
 }
