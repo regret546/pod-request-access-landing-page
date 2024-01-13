@@ -6,9 +6,13 @@ const emailInput = document.querySelector("#email");
 form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  if (!emailInput.value.match(emailRegex)) {
+  if (emailInput.value === "") {
     inputVerification.classList.add("inputError");
-    inputVerification.innerText = "Please enter a valid email!";
+    inputVerification.innerText = "Oops! Please add your email";
+    emailInput.value = "";
+  } else if (!emailInput.value.match(emailRegex)) {
+    inputVerification.classList.add("inputError");
+    inputVerification.innerText = "Oops! Please check your email";
     emailInput.value = "";
   } else {
     alert(`Email ${emailInput.value} Submitted`);
