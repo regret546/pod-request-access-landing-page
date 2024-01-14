@@ -3,13 +3,23 @@ body {
   font-family: var(--ff--primary);
   font-size: var(--fs--regular);
   color: var(--clr--white);
+  overflow-x: hidden;
 }
 
 .container {
   display: grid;
-  background: url("/assets/desktop/bg-pattern-dots.svg") no-repeat right 2.6% bottom 12%, url("/assets/desktop/image-host.jpg") no-repeat right 5% center;
+  background: url("/assets/desktop/image-host.jpg") no-repeat right 5% center;
+  background-size: contain;
   min-height: 100vh;
   margin: 3rem 10rem;
+}
+@media only screen and (max-width: 75em) {
+  .container {
+    background: url("/assets/tablet/image-host.jpg") no-repeat right center;
+    background-size: contain;
+    margin: 0;
+    margin-left: 2rem;
+  }
 }
 
 .cards {
@@ -49,7 +59,6 @@ body {
 .cards__info form input {
   cursor: text;
   color: var(--clr--grey);
-  letter-spacing: 1px;
   background: var(--clr--bg-input);
   width: 100%;
   border: none;
@@ -61,9 +70,9 @@ body {
 .cards__info form button {
   cursor: pointer;
   position: absolute;
-  right: 3px;
-  top: 3px;
-  bottom: 3px;
+  right: 4px;
+  top: 4px;
+  bottom: 4px;
   font-size: 1rem;
   border: none;
   background: var(--clr--green);
@@ -86,10 +95,23 @@ body {
 .cards__info_sponsors li {
   cursor: pointer;
 }
+.cards__info_sponsors li img {
+  max-width: 100%;
+  height: auto;
+  width: auto\9 ; /* ie8 */
+}
 .cards .inputError {
   position: absolute;
   left: 20px;
   color: red;
+}
+@media only screen and (max-width: 75em) {
+  .cards__info {
+    width: 80%;
+  }
+  .cards__info h1 {
+    font-size: 3rem;
+  }
 }
 
 /*

@@ -1,3 +1,5 @@
+@use "../layout/util/" as u;
+
 .cards {
   display: grid;
   gap: 12rem;
@@ -36,7 +38,6 @@
       input {
         cursor: text;
         color: var(--clr--grey);
-        letter-spacing: 1px;
         background: var(--clr--bg-input);
         width: 100%;
         border: none;
@@ -48,9 +49,10 @@
       button {
         cursor: pointer;
         position: absolute;
-        right: 3px;
-        top: 3px;
-        bottom: 3px;
+
+        right: 4px;
+        top: 4px;
+        bottom: 4px;
         font-size: 1rem;
         border: none;
         background: var(--clr--green);
@@ -74,6 +76,11 @@
 
       li {
         cursor: pointer;
+        img {
+          max-width: 100%;
+          height: auto;
+          width: auto\9; /* ie8 */
+        }
       }
     }
   }
@@ -82,5 +89,14 @@
     position: absolute;
     left: 20px;
     color: red;
+  }
+
+  @include u.breakpoints(large) {
+    &__info {
+      width: 80%;
+      h1 {
+        font-size: 3rem;
+      }
+    }
   }
 }
