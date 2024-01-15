@@ -9,15 +9,14 @@ body {
 .container {
   display: grid;
   background: url("/assets/desktop/image-host.jpg") no-repeat right 5% center;
-  background-size: contain;
+  background-size: 100%;
   min-height: 100vh;
-  margin: 3rem 10rem;
+  margin: 3rem 10rem 0;
 }
 @media only screen and (max-width: 75em) {
   .container {
     background: url("/assets/tablet/image-host.jpg") no-repeat right center;
-    background-size: contain;
-    margin: 0;
+    margin: 2rem 0 2rem;
     margin-left: 2rem;
   }
 }

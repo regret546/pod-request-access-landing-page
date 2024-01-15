@@ -15,9 +15,9 @@ form.addEventListener("submit", function (e) {
     inputVerification.innerText = "Oops! Please check your email";
     emailInput.value = "";
   } else {
+    alert(`Email ${emailInput.value} Submitted`);
     inputVerification.classList.remove("inputError");
     inputVerification.innerText = "";
     emailInput.value = "";
-    alert(`Email ${emailInput.value} Submitted`);
   }
 });
