@@ -49,7 +49,6 @@
       button {
         cursor: pointer;
         position: absolute;
-
         right: 4px;
         top: 4px;
         bottom: 4px;
@@ -96,6 +95,45 @@
       width: 80%;
       h1 {
         font-size: 3rem;
+      }
+    }
+  }
+
+  @include u.breakpoints(medium) {
+    display: grid;
+    grid-template-row: repeat(auto-fill, 186px);
+    place-items: center;
+    gap: 0;
+
+    &__info {
+      display: grid;
+      justify-items: center;
+      text-align: center;
+      background: none;
+
+      p {
+        width: 100%;
+      }
+
+      form {
+        max-width: 400px;
+
+        display: grid;
+        input {
+        }
+        button {
+          border-radius: 3rem;
+          padding: 1rem;
+          line-height: 1rem;
+          position: relative;
+        }
+      }
+
+      .inputError {
+        text-align: left;
+        position: relative;
+        left: 20px;
+        color: red;
       }
     }
   }

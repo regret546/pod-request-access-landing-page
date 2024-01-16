@@ -4,8 +4,6 @@ const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
 const emailInput = document.querySelector("#email");
 
 form.addEventListener("submit", function (e) {
-  e.preventDefault();
-
   if (emailInput.value === "") {
     inputVerification.classList.add("inputError");
     inputVerification.innerText = "Oops! Please add your email";
@@ -20,4 +18,5 @@ form.addEventListener("submit", function (e) {
     inputVerification.innerText = "";
     emailInput.value = "";
   }
+  e.preventDefault();
 });

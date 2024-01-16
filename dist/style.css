@@ -5,11 +5,19 @@ body {
   color: var(--clr--white);
   overflow-x: hidden;
 }
+@media only screen and (max-width: 43.75em) {
+  body {
+    background-image: url("/assets/mobile/image-host.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 .container {
   display: grid;
-  background: url("/assets/desktop/image-host.jpg") no-repeat right 5% center;
-  background-size: 100%;
+  background: url("/assets/desktop/image-host.jpg") no-repeat right 5% top 38%;
+  background: contain;
   min-height: 100vh;
   margin: 3rem 10rem 0;
 }
@@ -18,6 +26,12 @@ body {
     background: url("/assets/tablet/image-host.jpg") no-repeat right center;
     margin: 2rem 0 2rem;
     margin-left: 2rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .container {
+    background-image: none;
+    display: grid;
   }
 }
 
@@ -110,6 +124,39 @@ body {
   }
   .cards__info h1 {
     font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 43.75em) {
+  .cards {
+    display: grid;
+    grid-template-row: repeat(auto-fill, 186px);
+    place-items: center;
+    gap: 0;
+  }
+  .cards__info {
+    display: grid;
+    justify-items: center;
+    text-align: center;
+    background: none;
+  }
+  .cards__info p {
+    width: 100%;
+  }
+  .cards__info form {
+    max-width: 400px;
+    display: grid;
+  }
+  .cards__info form button {
+    border-radius: 3rem;
+    padding: 1rem;
+    line-height: 1rem;
+    position: relative;
+  }
+  .cards__info .inputError {
+    text-align: left;
+    position: relative;
+    left: 20px;
+    color: red;
   }
 }
 

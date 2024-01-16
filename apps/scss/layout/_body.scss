@@ -1,7 +1,16 @@
+@use "../layout/util/" as u;
+
 body {
   background-color: var(--clr--background);
   font-family: var(--ff--primary);
   font-size: var(--fs--regular);
   color: var(--clr--white);
   overflow-x: hidden;
+
+  @include u.breakpoints(medium) {
+    background-image: url("/assets/mobile/image-host.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
