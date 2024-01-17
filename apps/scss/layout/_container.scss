@@ -16,5 +16,7 @@
   @include u.breakpoints(medium) {
     background-image: none;
     display: grid;
+    justify-items: center;
+    margin: 0;
   }
 }
