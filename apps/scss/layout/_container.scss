@@ -14,9 +14,11 @@
   }
 
   @include u.breakpoints(medium) {
+    position: relative;
     background-image: none;
     display: grid;
     justify-items: center;
     margin: 0;
+    isolation: isolate;
   }
 }

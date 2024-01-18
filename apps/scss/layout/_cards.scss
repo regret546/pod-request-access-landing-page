@@ -115,7 +115,6 @@
     &__info {
       width: 100%;
       display: grid;
-
       padding: 0 1rem;
       justify-items: center;
       text-align: center;
@@ -127,7 +126,7 @@
         width: 100%;
       }
       p {
-        width: 70%;
+        width: 90%;
       }
 
       form {
@@ -149,6 +148,7 @@
         position: relative;
         left: 20px;
         color: red;
+        line-height: 1rem;
       }
       &_sponsors {
         margin: 0;

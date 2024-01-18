@@ -12,6 +12,14 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  body::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--clr--background);
+    z-index: -1;
+    opacity: 0.8;
+  }
 }
 
 .container {
@@ -30,10 +38,12 @@ body {
 }
 @media only screen and (max-width: 43.75em) {
   .container {
+    position: relative;
     background-image: none;
     display: grid;
     justify-items: center;
     margin: 0;
+    isolation: isolate;
   }
 }
 
@@ -156,7 +166,7 @@ body {
     width: 100%;
   }
   .cards__info p {
-    width: 70%;
+    width: 90%;
   }
   .cards__info form {
     order: 5;
@@ -175,6 +185,7 @@ body {
     position: relative;
     left: 20px;
     color: red;
+    line-height: 1rem;
   }
   .cards__info_sponsors {
     margin: 0;
