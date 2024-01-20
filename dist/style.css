@@ -32,6 +32,7 @@ body {
 @media only screen and (max-width: 75em) {
   .container {
     background: url("/assets/tablet/image-host.jpg") no-repeat right center;
+    background-size: contain;
     margin: 2rem 0 2rem;
     margin-left: 2rem;
   }
@@ -48,6 +49,7 @@ body {
 }
 
 .cards {
+  position: relative;
   display: grid;
   gap: 12rem;
 }
@@ -125,6 +127,14 @@ body {
   height: auto;
   width: auto\9 ; /* ie8 */
 }
+.cards .dots {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: 35px;
+  bottom: 140px;
+  z-index: 0;
+}
 .cards .inputError {
   position: absolute;
   left: 20px;
@@ -136,6 +146,13 @@ body {
   }
   .cards__info h1 {
     font-size: 3rem;
+  }
+  .cards .dots {
+    width: 100%;
+    position: relative;
+    inset: 0;
+    display: flex;
+    justify-content: flex-start;
   }
 }
 @media only screen and (max-width: 43.75em) {
@@ -189,6 +206,9 @@ body {
   }
   .cards__info_sponsors {
     margin: 0;
+  }
+  .cards .dots {
+    display: none;
   }
 }
 

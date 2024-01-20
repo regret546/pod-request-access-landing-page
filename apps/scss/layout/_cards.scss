@@ -1,6 +1,7 @@
 @use "../layout/util/" as u;
 
 .cards {
+  position: relative;
   display: grid;
   gap: 12rem;
 
@@ -83,6 +84,14 @@
       }
     }
   }
+  .dots {
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    right: 35px;
+    bottom: 140px;
+    z-index: 0;
+  }
 
   .inputError {
     position: absolute;
@@ -96,6 +105,13 @@
       h1 {
         font-size: 3rem;
       }
+    }
+    .dots {
+      width: 100%;
+      position: relative;
+      inset: 0;
+      display: flex;
+      justify-content: flex-start;
     }
   }
 
@@ -153,6 +169,10 @@
       &_sponsors {
         margin: 0;
       }
+    }
+
+    .dots {
+      display: none;
     }
   }
 }
